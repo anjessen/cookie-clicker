@@ -1,6 +1,7 @@
-/////////////// Style.css
+/////////////// Style.scss
 
-body#override  {
+
+body  {
     background-color: green;
 }
 
@@ -8,8 +9,10 @@ body#override  {
 
 .terre {
     background-image: url(/assets/IMG/terre.png); // Terre IMG principal
+    width: 10%;
+    height: auto;
 }
-.temp{
+.temp {
     background-image: url(/assets/IMG/temp1.png); // thermometre explose
 }
 
