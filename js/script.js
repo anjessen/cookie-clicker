@@ -38,6 +38,7 @@ function buyItems(){
         })
     })
 }
+buyItems();
 
 function totalMoney() {
     items.forEach(element => {
@@ -65,7 +66,6 @@ function frame(){
     totalDegree();
     totalMoney();
     click();
-    buyItems();
     stopInterval();
     console.log(degreeCount, moneyCount);
 }
