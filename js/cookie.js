@@ -16,11 +16,6 @@ function totalMoney() {
 function frame(){
     totalDegree();
     totalMoney();
+    console.log(degreeCount, moneyCount);
 }
-if (degreeCount == 15)
-{
-    console.log(`Well done! the earth is now Habitable!`);
-    break;
-}
-else
-    setInterval(frame, 1000 / 60);
+setInterval(frame, 1000);
