@@ -37,14 +37,11 @@ items.forEach((element, i) => {
     })
 })
 
-function totalDegree() {
-    degreeCount--;
-    console.log(degreeCount);
-}
 
 function totalMoney() {
-    moneyCount++;
-    console.log(moneyCount);
+    items.forEach(element => {
+        moneyCount += element["inc"] * element["quantity"];
+    })
 }
 
 function click() {
@@ -67,9 +64,7 @@ function frame(){
     totalDegree();
     totalMoney();
     click();
-    items.forEach(element => {
-        moneyCount += element["inc"] * element["quantity"];
-    })
+
     stopInterval();
     console.log(degreeCount, moneyCount);
 }
