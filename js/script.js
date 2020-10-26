@@ -27,16 +27,17 @@ console.log(sunpanel.cost, windturbine.cost);
 let degreeCount = 10000;
 let moneyCount = 0;
 
-items.forEach((element, i) => {
-    document.getElementById(`${element}`).addEventListener("click", () => {
-        if (moneyCount >= element["cost"]) {
-            element["quantity"]++;
-            moneyCount -= element["cost"];
-            degreeCount -= element["temperature"];
-        }
+function buyItems(){
+    items.forEach((element, i) => {
+        document.getElementById(`${element}`).addEventListener("click", () => {
+            if (moneyCount >= element["cost"]) {
+                element["quantity"]++;
+                moneyCount -= element["cost"];
+                degreeCount -= element["temperature"];
+            }
+        })
     })
-})
-
+}
 
 function totalMoney() {
     items.forEach(element => {
@@ -64,7 +65,7 @@ function frame(){
     totalDegree();
     totalMoney();
     click();
-
+    buyItems();
     stopInterval();
     console.log(degreeCount, moneyCount);
 }
