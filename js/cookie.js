@@ -38,5 +38,4 @@ function frame(){
     stopInterval();
     console.log(degreeCount, moneyCount);
 }
-let interval = null;    
-interval = setInterval(frame, 1000);
+let interval = setInterval(frame, 1000);
