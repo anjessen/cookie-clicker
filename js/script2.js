@@ -1,4 +1,3 @@
-
 class Item {
     constructor (inc, quantity, growth, cost) {
         this.inc = inc;
@@ -43,11 +42,13 @@ function totalMoney() {
 }
 
 function click() {
-    document.querySelector("terre").addEventListener("click", function(){
+    let click = document.querySelector("terre");
+    if (click.onclick == true)
+    {
         degreeCount--;
         moneyCount++;
         console.log(degreeCount, moneyCount);
-    });
+    }
 }
 
 function stopInterval(){
