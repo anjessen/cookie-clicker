@@ -67,7 +67,7 @@ function frame(){
     totalMoney();
     click();
     items.forEach(element => {
-        moneyCount += element["inc"];
+        moneyCount += element["inc"] * element["quantity"];
     })
     stopInterval();
     console.log(degreeCount, moneyCount);
