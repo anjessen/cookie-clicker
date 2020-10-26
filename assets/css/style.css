@@ -1,4 +1,8 @@
 @charset "UTF-8";
+body#override {
+  background-color: green;
+}
+
 .terre {
   background-image: url(/assets/IMG/terre.png);
 }
