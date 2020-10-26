@@ -32,6 +32,7 @@ items.forEach((element, i) => {
         if (moneyCount >= element["cost"]) {
             element["quantity"]++;
             moneyCount -= element["cost"];
+            degreeCount -= element["temperature"];
         }
     })
 })
