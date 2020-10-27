@@ -29,7 +29,7 @@ items.forEach((element, i) => {
 })
 
 let degreeCount = 1000000;
-let moneyCount = 10;
+let moneyCount = 0;
 let clickCount = 0;
 
 items.forEach((element, i) => {
@@ -60,7 +60,7 @@ function checkUpgrade(element) {
 
 function totalMoney() {
     items.forEach(element => {
-        moneyCount += element["inc"] * element["quantity"] * (2 ** level);
+        moneyCount += element["inc"] * element["quantity"] * (2 ** element["level"]);
     })
 }
 
