@@ -30,10 +30,19 @@ items.forEach((element, i) => {
 })
 
 let degreeCount = 1000000;
-let moneyCount = 0;
-let clickCount = 0;
+let moneyCount = 1000000;
 
-function pushUpgrade (name, nameFR, element, effect, cost) {
+class Upgrade {
+    constructor(name, nameFR, cost) {
+        this.name = name;
+        this.nameFR = nameFR;
+        this.cost = cost;
+    }
+}
+
+let currentUpgrades = [];
+
+/*function pushUpgrade (name, nameFR, element, effect, cost) {
     let li = document.createElement("LI");
     document.getElementById("upgrades").appendChild(li);
     let upg = document.createElement("A");
@@ -41,16 +50,39 @@ function pushUpgrade (name, nameFR, element, effect, cost) {
     upg.setAttribute("id", name);
     upg.setAttribute("class", "upgrade");
     upg.innerHTML = `${nameFR} ${effect} (${cost}€)`
-}
+}*/
 
 function checkUpgrade(element) {
     if ((element["quantity"] == 5) || (element["quantity"] == 15) || ((element["quantity"] % 25 == 0) && (element["quantity"] !== 0))) {
-        pushUpgrade(element.name, element.nameFR, element, "lvl up !", element.cost * 10)
+        currentUpgrades.push(new Upgrade (element.name, element.nameFR, element.price * 10));
+        let li = document.createElement("LI");
+        document.getElementById("upgrades").appendChild(li);
+        let upg = document.createElement("A");
+        li.appendChild(upg);
+        upg.setAttribute("id", element.name);
+        upg.setAttribute("class", "upgrade");
+        upg.innerHTML = `${element.nameFR} lvl up ! (${element.price * 10}€)`
     }
 }
 
+currentUpgrades.forEach(element => {
+    document.getElementById(element.name).addEventListener("click", () => {
+        if (moneyCount >= element["cost"]) {
+            element["quantity"]++;
+            items.forEach(x => {
+                if (x.name == element.name) {
+                    x["level"]++;
+                }
+            })
+            moneyCount -= element["cost"];
+            document.getElementById(element.name).remove();
+            currentUpgrades.pop(element);
+        }
+    })
+})
+
 items.forEach((element, i) => {
-    document.getElementsByClassName(`item`)[i].addEventListener("click", () => {
+    document.getElementsByClassName("item")[i].addEventListener("click", () => {
         if (moneyCount >= element["price"]) {
             element["quantity"]++;
             moneyCount -= element["price"];
@@ -58,6 +90,7 @@ items.forEach((element, i) => {
             document.getElementsByClassName("quantity")[i].innerHTML = element["quantity"];
             element["price"] = Math.round(element["cost"] * (element["growth"] ** element["quantity"]));
             document.getElementsByClassName("price")[i].innerHTML = element["price"];
+            document.getElementsByClassName("lvl")[i].innerHTML = element["level"];
         }
         checkUpgrade(element);
     })
@@ -92,7 +125,7 @@ function frame(){
     stopInterval();
     document.getElementById("money").innerHTML = Math.round(moneyCount);
     document.getElementsByTagName("H2")[0].innerHTML = `${Math.round(degreeCount)}°C`;
-    console.log(degreeCount, moneyCount);
+
 }
 
 setInterval(frame, 1000);
