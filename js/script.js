@@ -32,18 +32,6 @@ let degreeCount = 1000000;
 let moneyCount = 0;
 let clickCount = 0;
 
-items.forEach((element, i) => {
-    document.getElementById(`${element["name"]}`).addEventListener("click", () => {
-        if (moneyCount >= element["price"]) {
-            element["quantity"]++;
-            moneyCount -= element["price"];
-            degreeCount -= element["temperature"];
-            document.getElementsByClassName("quantity")[i].innerHTML = element["quantity"];
-            element["price"] = Math.round(element["cost"] * (element["growth"] ** element["quantity"]));
-            document.getElementsByClassName("price")[i].innerHTML = element["price"];
-        }
-    })
-})
 
 function pushUpgrade (name, element, effect, cost) {
     let li = document.createElement("LI");
@@ -60,6 +48,20 @@ function checkUpgrade(element) {
         pushUpgrade(element.name, element, "lvl up !", element.cost)
     }
 }
+
+items.forEach((element, i) => {
+    document.getElementById(`${element["name"]}`).addEventListener("click", () => {
+        if (moneyCount >= element["price"]) {
+            element["quantity"]++;
+            moneyCount -= element["price"];
+            degreeCount -= element["temperature"];
+            document.getElementsByClassName("quantity")[i].innerHTML = element["quantity"];
+            element["price"] = Math.round(element["cost"] * (element["growth"] ** element["quantity"]));
+            document.getElementsByClassName("price")[i].innerHTML = element["price"];
+        }
+        checkUpgrade();
+    })
+})
 
 function totalMoney() {
     items.forEach(element => {
