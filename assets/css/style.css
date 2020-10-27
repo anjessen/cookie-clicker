@@ -1,26 +1,5 @@
 @charset "UTF-8";
 body {
-<<<<<<< HEAD
-  background-color: palegreen green;
-}
-
-.terre {
-  background-image: url(/assets/IMG/terre.png);
-  width: 10%;
-  height: auto;
-}
-
-h2 {
-  color: green;
-}
-
-.temp {
-  background-image: url(/assets/IMG/temp1.png);
-}
-
-.compost {
-  background-image: url(/assets/IMG/ramassetonmegot1.png);
-=======
   background-color: palegreen;
 }
 
@@ -71,7 +50,6 @@ ul li a:hover {
   height: auto;
   text-align: center;
   background-repeat: no-repeat;
->>>>>>> yvangoudmant
 }
 
 .Nv1.1 {
