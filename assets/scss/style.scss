@@ -7,6 +7,7 @@ body {
 h2{
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: green;
+    font-size: 5em;
 
 }
 p {
@@ -20,14 +21,14 @@ ul {
     list-style-type:none;
     }
    li {
-    margin-left:2px;
+    margin-left:10px;
     float:left; /*pour IE*/
     }
-   ul li a {
+   ul li p {
     display:block;
     float:left;   
     width:100px;
-    background-color:darkgreen;
+    background-color:goldenrod;
     color:white;
     text-decoration:none;
     text-align:center;
@@ -38,7 +39,7 @@ ul {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
     }
-   ul li a:hover {
+   ul li :hover {
     background-color:#D3D3D3;
     border-color:#696969 #DCDCDC #DCDCDC #696969;
     } 
@@ -54,18 +55,25 @@ ul {
 
 
 .terre {
-    width: 100%;
+    width: 25%;
     height: auto;
     text-align: center;
-    background-repeat: no-repeat;
+    margin-top: 10%;
+    
 
 }
 
 .temp {
-  
+    width: 5%;
+    height: auto;
+    margin-right:25% ;
+    margin-left:10% ;
 }
 
 .compost {
+    width: 10%;
+    height: auto;
+
   
 }
 
@@ -94,7 +102,8 @@ ul {
 }
 
 .tree {
-  
+    width: 10%;
+    height: auto;
 }
 
 .Nv3.3 {
@@ -102,11 +111,13 @@ ul {
 }
 
 .recycle {
-  background-image: url(/assets/IMG/dechargebac.png);
+    width: 10%;
+    height: auto;
 }
 
 .car {
-  background-image: url(/assets/IMG/vélo1.png);
+    width: 10%;
+    height: auto;
 }
 
 .Nv4.1 {
@@ -118,7 +129,8 @@ ul {
 }
 
 .factory {
-  
+    width: 10%;
+    height: auto;
 }
 
 .Nv5.1 {
@@ -126,7 +138,8 @@ ul {
 }
 
 .windturbine {
-  
+    width: 10%;
+    height: auto;
 }
 
 .Nv6.1 {
@@ -138,7 +151,8 @@ ul {
 }
 
 .politician {
-  
+    width: 10%;
+    height: auto;
 }
 
 .Nv8.1 {
@@ -146,7 +160,8 @@ ul {
 }
 
 .sunpanel {
-  
+    width: 10%;
+    height: auto;
 }
 
 .Nv9.1 {
