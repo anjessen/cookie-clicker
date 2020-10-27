@@ -1,29 +1,30 @@
 
 class Item {
-    constructor (name, inc, growth, cost) {
+    constructor (name, inc, cost) {
         this.name = name;
         this.inc = inc;
         this.quantity = 0;
-        this.growth = growth;
-        this.cost = cost * (growth ** this.quantity);
+        this.growth = 1.05;
+        this.cost = cost;
         this.temperature = inc;
         this.level = 0;
     }
 }
 
-let compost = new Item ("compost", 0.1, 1.01, 10);
-let tree = new Item ("tree", 1, 1.02, 30);
-let sunpanel = new Item ("sunpanel", 10, 1.03, 300);
-let car = new Item ("car", 50, 1.04, 1000);
-let windturbine = new Item ("windturbine", 300, 1.05, 4500);
-let recycle = new Item ("recycle", 1000, 1.06, 10000);
-let factory = new Item ("factory", 3000, 1.08, 20000);
-let politician = new Item ("politician", 10000, 1.1, 50000);
+let compost = new Item ("compost", 0.1, 10);
+let tree = new Item ("tree", 1, 30);
+let sunpanel = new Item ("sunpanel", 10, 300);
+let car = new Item ("car", 50, 1000);
+let windturbine = new Item ("windturbine", 300, 4500);
+let recycle = new Item ("recycle", 1000, 10000);
+let factory = new Item ("factory", 3000, 20000);
+let politician = new Item ("politician", 10000, 50000);
 
 let items = [compost, tree, sunpanel, car, windturbine, recycle, factory, politician];
 
-
 console.log(sunpanel.cost, windturbine.cost);
+
+
 
 let degreeCount = 10000;
 let moneyCount = 10;
@@ -31,11 +32,13 @@ let moneyCount = 10;
 function buyItems(){
     items.forEach((element, i) => {
         document.getElementById(`${element["name"]}`).addEventListener("click", () => {
-            if (moneyCount >= element["cost"]) {
+            if (moneyCount >= element["price"]) {
                 element["quantity"]++;
-                moneyCount -= element["cost"];
+                moneyCount -= element["price"];
                 degreeCount -= element["temperature"];
                 document.getElementsByClassName("quantity")[i].innerHTML = element["quantity"];
+                document.getElementsByClassName("price")[i].innerHTML = element["price"];
+
             }
         })
     })
@@ -70,6 +73,12 @@ function frame(){
     stopInterval();
     document.getElementById("money").innerHTML = moneyCount;
     console.log(degreeCount, moneyCount);
+    items.forEach((element, i) => {
+        element["price"] = Math.round(element["cost"] * (element["growth"] ** element["quantity"]));
+        document.getElementsByClassName("price")[i].innerHTML = element["price"];
+        document.getElementsByClassName("lvl")[i].innerHTML = element["level"];
+        
+    })
 }
 
 setInterval(frame, 1000);
