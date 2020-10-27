@@ -22,7 +22,15 @@ let politician = new Item ("politician", 10000, 50000);
 
 let items = [compost, tree, sunpanel, car, windturbine, recycle, factory, politician];
 
-console.log(sunpanel.cost, windturbine.cost);
+
+class Upgrade {
+    constructor (name, cost) {
+        this.name = name;
+        this.cost = cost;
+        this.event = false;
+    }
+
+}
 
 
 items.forEach((element, i) => {
@@ -33,6 +41,7 @@ items.forEach((element, i) => {
 
 let degreeCount = 1000000;
 let moneyCount = 10;
+let clickCount = 0;
 
 function buyItems(){
     items.forEach((element, i) => {
@@ -52,7 +61,7 @@ buyItems();
 
 function totalMoney() {
     items.forEach(element => {
-        moneyCount += element["inc"] * element["quantity"];
+        moneyCount += element["inc"] * element["quantity"] * (2 ** level);
     })
 }
 
@@ -60,6 +69,7 @@ function click() {
     document.getElementsByClassName("terre")[0].addEventListener("click", function(){
         degreeCount--;
         moneyCount++;
+        clickCount++;
         document.getElementById("money").innerHTML = Math.round(moneyCount);
     });
 }
