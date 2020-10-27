@@ -49,7 +49,7 @@ function totalMoney() {
 }
 
 function click() {
-    document.querySelector("terre").addEventListener("click", function(){
+    document.getElementsByClassName("terre")[0].addEventListener("click", function(){
         degreeCount--;
         moneyCount++;
         document.getElementById("money").innerHTML = moneyCount;
