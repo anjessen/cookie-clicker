@@ -30,7 +30,7 @@ items.forEach((element, i) => {
 })
 
 let degreeCount = 1000000;
-let moneyCount = 1000000;
+let moneyCount = 0;
 
 
 items.forEach((element, i) => {
