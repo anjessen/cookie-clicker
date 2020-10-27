@@ -40,7 +40,7 @@ function pushUpgrade (name, element, effect, cost) {
     li.appendChild(upg);
     upg.setAttribute("id", name);
     upg.setAttribute("class", "upgrade");
-    upg.innerHTML = `${element} ${effect} (${cost})`
+    upg.innerHTML = `${name} ${effect} (${cost})`
 }
 
 function checkUpgrade(element) {
@@ -59,7 +59,7 @@ items.forEach((element, i) => {
             element["price"] = Math.round(element["cost"] * (element["growth"] ** element["quantity"]));
             document.getElementsByClassName("price")[i].innerHTML = element["price"];
         }
-        checkUpgrade();
+        checkUpgrade(element);
     })
 })
 
