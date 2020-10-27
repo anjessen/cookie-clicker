@@ -52,7 +52,7 @@ function click() {
     document.querySelector("terre").addEventListener("click", function(){
         degreeCount--;
         moneyCount++;
-        console.log(degreeCount, moneyCount);
+        document.getElementById("money").innerHTML = moneyCount;
     });
 }
 
