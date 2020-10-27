@@ -2,7 +2,7 @@
 
 
 body  {
-    background-color: green;
+    background-color:palegreen green;
 }
 
 /// Image principal 
@@ -12,6 +12,11 @@ body  {
     width: 10%;
     height: auto;
 }
+
+h2 {
+    color: green;
+}
+
 .temp {
     background-image: url(/assets/IMG/temp1.png); // thermometre explose
 }
@@ -112,8 +117,3 @@ body  {
 
 
 /////// Badges 
-
-
-
-
-
