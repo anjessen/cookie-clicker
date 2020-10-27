@@ -1,7 +1,8 @@
 
 class Item {
-    constructor (name, inc, cost) {
+    constructor (name, nameFR, inc, cost) {
         this.name = name;
+        this.nameFR = nameFR;
         this.inc = inc;
         this.quantity = 0;
         this.growth = 1.2;
@@ -11,14 +12,14 @@ class Item {
     }
 }
 
-let compost = new Item ("compost", 0.1, 10);
-let tree = new Item ("tree", 1, 30);
-let sunpanel = new Item ("sunpanel", 12, 250);
-let car = new Item ("car", 60, 1000);
-let windturbine = new Item ("windturbine", 300, 4500);
-let recycle = new Item ("recycle", 1000, 10000);
-let factory = new Item ("factory", 3000, 20000);
-let politician = new Item ("politician", 10000, 50000);
+let compost = new Item ("compost", "Compost", 0.1, 10);
+let tree = new Item ("tree", "Arbre", 1, 30);
+let sunpanel = new Item ("sunpanel", "Panneau Solaire", 12, 250);
+let car = new Item ("car", "Voiture électrique", 60, 1000);
+let windturbine = new Item ("windturbine", "Éolienne", 300, 4500);
+let recycle = new Item ("recycle", "Centre de tri", 1000, 10000);
+let factory = new Item ("factory", "Usine verte", 3000, 20000);
+let politician = new Item ("politician", "Politicien", 10000, 50000);
 
 let items = [compost, tree, sunpanel, car, windturbine, recycle, factory, politician];
 
@@ -32,20 +33,19 @@ let degreeCount = 1000000;
 let moneyCount = 0;
 let clickCount = 0;
 
-
-function pushUpgrade (name, element, effect, cost) {
+function pushUpgrade (name, nameFR, element, effect, cost) {
     let li = document.createElement("LI");
     document.getElementById("upgrades").appendChild(li);
     let upg = document.createElement("A");
     li.appendChild(upg);
     upg.setAttribute("id", name);
     upg.setAttribute("class", "upgrade");
-    upg.innerHTML = `${name} ${effect} (${cost})`
+    upg.innerHTML = `${nameFR} ${effect} (${cost}€)`
 }
 
 function checkUpgrade(element) {
     if ((element["quantity"] == 5) || (element["quantity"] == 15) || ((element["quantity"] % 25 == 0) && (element["quantity"] !== 0))) {
-        pushUpgrade(element.name, element, "lvl up !", element.cost)
+        pushUpgrade(element.name, element.nameFR, element, "lvl up !", element.cost * 10)
     }
 }
 
