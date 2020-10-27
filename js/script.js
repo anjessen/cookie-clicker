@@ -4,7 +4,7 @@ class Item {
         this.name = name;
         this.inc = inc;
         this.quantity = 0;
-        this.growth = 1.05;
+        this.growth = 1.2;
         this.cost = cost;
         this.temperature = inc;
         this.level = 0;
@@ -25,8 +25,13 @@ let items = [compost, tree, sunpanel, car, windturbine, recycle, factory, politi
 console.log(sunpanel.cost, windturbine.cost);
 
 
+items.forEach((element, i) => {
+    element["price"] = Math.round(element["cost"] * (element["growth"] ** element["quantity"]));
+    document.getElementsByClassName("price")[i].innerHTML = element["price"];
+    document.getElementsByClassName("lvl")[i].innerHTML = element["level"];
+})
 
-let degreeCount = 10000;
+let degreeCount = 1000000;
 let moneyCount = 10;
 
 function buyItems(){
@@ -37,8 +42,8 @@ function buyItems(){
                 moneyCount -= element["price"];
                 degreeCount -= element["temperature"];
                 document.getElementsByClassName("quantity")[i].innerHTML = element["quantity"];
+                element["price"] = Math.round(element["cost"] * (element["growth"] ** element["quantity"]));
                 document.getElementsByClassName("price")[i].innerHTML = element["price"];
-
             }
         })
     })
@@ -72,12 +77,8 @@ function frame(){
     totalMoney();
     stopInterval();
     document.getElementById("money").innerHTML = Math.round(moneyCount);
+    document.getElementsByTagName("H2")[0].innerHTML = `${Math.round(degreeCount)}°C`;
     console.log(degreeCount, moneyCount);
-    items.forEach((element, i) => {
-        element["price"] = Math.round(element["cost"] * (element["growth"] ** element["quantity"]));
-        document.getElementsByClassName("price")[i].innerHTML = element["price"];
-        document.getElementsByClassName("lvl")[i].innerHTML = element["level"];
-    })
 }
 
 setInterval(frame, 1000);
