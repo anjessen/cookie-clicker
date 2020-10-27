@@ -1,119 +1,155 @@
-/////////////// Style.scss COOKIES
+@charset "UTF-8";
 
-
-body  {
-    background-color:palegreen green;
+body {
+  background-color: palegreen;
 }
 
-/// Image principal 
+h2{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: green;
+
+}
+p {
+    color:goldenrod;
+    font-size:150% ;
+}
+
+ul {
+    padding:0;
+    margin:0;
+    list-style-type:none;
+    }
+   li {
+    margin-left:2px;
+    float:left; /*pour IE*/
+    }
+   ul li a {
+    display:block;
+    float:left;   
+    width:100px;
+    background-color:darkgreen;
+    color:white;
+    text-decoration:none;
+    text-align:center;
+    padding:5px;
+    border:2px solid;
+    /*pour avoir un effet "outset" avec IE :*/
+    border-color:#DCDCDC #696969 #696969 #DCDCDC;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    }
+   ul li a:hover {
+    background-color:#D3D3D3;
+    border-color:#696969 #DCDCDC #DCDCDC #696969;
+    } 
+
+
+
+
+
+
+
+///// IMG
+
+
 
 .terre {
-    background-image: url(/assets/IMG/terre.png); // Terre IMG principal
-    width: 10%;
+    width: 100%;
     height: auto;
-}
+    text-align: center;
+    background-repeat: no-repeat;
 
-h2 {
-    color: green;
 }
 
 .temp {
-    background-image: url(/assets/IMG/temp1.png); // thermometre explose
+  
 }
 
-
-
-
-/// icone bonus
-
-.compost{//.Nv1 {
-    background-image: url(/assets/IMG/ramassetonmegot1.png); // megot à terre
+.compost {
+  
 }
 
 .Nv1.1 {
-    background-image: url(/assets/IMG/ramassetonmegot2.png); // logo ramasse ton megot
+  background-image: url(/assets/IMG/ramassetonmegot2.png);
 }
 
 .Nv2 {
-    background-image: url(/assets/IMG/plastique-bouteille.png); // bouteille-plastique -> bouteille réutilisable
+  background-image: url(/assets/IMG/plastique-bouteille.png);
 }
 
 .Nv2.1 {
-    background-image: url(/assets/IMG/bouteilleverre1.png); // bouteille verre
+  background-image: url(/assets/IMG/bouteilleverre1.png);
 }
 
 .Nv2.2 {
-    background-image: url(/assets/IMG/sacréutilisable.png); // sac réutilisable
+  background-image: url(/assets/IMG/sacréutilisable.png);
 }
 
 .Nv3 {
-    background-image: url(/assets/IMG/poubelle-verte.png); // poubelle verte
+  background-image: url(/assets/IMG/poubelle-verte.png);
 }
 
 .Nv3.1 {
-    background-image: url(/assets/IMG/poubelle-jaune.png); // poubelle jaune
+  background-image: url(/assets/IMG/poubelle-jaune.png);
 }
 
-.tree {//.Nv3.2 {
-    background-image: url(/assets/IMG/recycle.jpeg); // bac recyclage
+.tree {
+  
 }
 
 .Nv3.3 {
-    background-image: url(/assets/IMG/camionpoubelle.png); // camion poubelles
+  background-image: url(/assets/IMG/camionpoubelle.png);
 }
 
-.recycle{ //.Nv3.4 {
-    background-image: url(/assets/IMG/dechargebac.png); // Décharge conteneur
+.recycle {
+  background-image: url(/assets/IMG/dechargebac.png);
 }
 
-.car{ //.Nv4 {
-    background-image: url(/assets/IMG/vélo1.png); // Vélo vert
+.car {
+  background-image: url(/assets/IMG/vélo1.png);
 }
 
 .Nv4.1 {
-    background-image: url(/assets/IMG/voitureelectrique.png); // voiture electrique
+  background-image: url(/assets/IMG/voitureelectrique.png);
 }
 
 .Nv4.2 {
-    background-image: url(/assets/IMG/grosbus.png); // Bus
+  background-image: url(/assets/IMG/grosbus.png);
 }
 
-.factory{ //.Nv5 {
-    background-image: url(/assets/IMG/usine1.png); // petite usine
+.factory {
+  
 }
 
 .Nv5.1 {
-    background-image: url(/assets/IMG/usine2.png); // grande usine
+  background-image: url(/assets/IMG/usine2.png);
 }
 
-.windturbine{ //.Nv6 {
-    background-image: url(/assets/IMG/Eolienne1.png); // petite éolienne
+.windturbine {
+  
 }
 
 .Nv6.1 {
-    background-image: url(/assets/IMG/Eolienne2.png); // grande éolienne
+  background-image: url(/assets/IMG/Eolienne2.png);
 }
 
 .Nv7 {
-    background-image: url(/assets/IMG/planterunegraine.png); // plante une graine
+  background-image: url(/assets/IMG/planterunegraine.png);
 }
 
-.politician{ //.Nv8 {
-    background-image: url(/assets/IMG/vote1.png); // buletin de vote 
+.politician {
+  
 }
 
 .Nv8.1 {
-    background-image: url(/assets/IMG/vote2.jpeg); // cycle éternel 
+  background-image: url(/assets/IMG/vote2.jpeg);
 }
 
-.sunpanel {//.Nv9 {
-    background-image: url(/assets/IMG/panneauS1.png); // petit panneaux photovoltéique
+.sunpanel {
+  
 }
 
 .Nv9.1 {
-    background-image: url(/assets/IMG/panneauS2.png); // gros panneaux photovoltéique
+  background-image: url(/assets/IMG/panneauS2.png);
 }
-
-
-
-/////// Badges 
+/*# sourceMappingURL=Style.css.map */

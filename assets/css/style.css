@@ -1,24 +1,55 @@
 @charset "UTF-8";
 body {
-  background-color: palegreen green;
-}
-
-.terre {
-  background-image: url(/assets/IMG/terre.png);
-  width: 10%;
-  height: auto;
+  background-color: palegreen;
 }
 
 h2 {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   color: green;
 }
 
-.temp {
-  background-image: url(/assets/IMG/temp1.png);
+p {
+  color: goldenrod;
+  font-size: 150%;
 }
 
-.compost {
-  background-image: url(/assets/IMG/ramassetonmegot1.png);
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+li {
+  margin-left: 2px;
+  float: left;
+  /*pour IE*/
+}
+
+ul li a {
+  display: block;
+  float: left;
+  width: 100px;
+  background-color: darkgreen;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  padding: 5px;
+  border: 2px solid;
+  /*pour avoir un effet "outset" avec IE :*/
+  border-color: #DCDCDC #696969 #696969 #DCDCDC;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+ul li a:hover {
+  background-color: #D3D3D3;
+  border-color: #696969 #DCDCDC #DCDCDC #696969;
+}
+
+.terre {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  background-repeat: no-repeat;
 }
 
 .Nv1.1 {
@@ -45,10 +76,6 @@ h2 {
   background-image: url(/assets/IMG/poubelle-jaune.png);
 }
 
-.tree {
-  background-image: url(/assets/IMG/recycle.jpeg);
-}
-
 .Nv3.3 {
   background-image: url(/assets/IMG/camionpoubelle.png);
 }
@@ -69,16 +96,8 @@ h2 {
   background-image: url(/assets/IMG/grosbus.png);
 }
 
-.factory {
-  background-image: url(/assets/IMG/usine1.png);
-}
-
 .Nv5.1 {
   background-image: url(/assets/IMG/usine2.png);
-}
-
-.windturbine {
-  background-image: url(/assets/IMG/Eolienne1.png);
 }
 
 .Nv6.1 {
@@ -89,16 +108,8 @@ h2 {
   background-image: url(/assets/IMG/planterunegraine.png);
 }
 
-.politician {
-  background-image: url(/assets/IMG/vote1.png);
-}
-
 .Nv8.1 {
   background-image: url(/assets/IMG/vote2.jpeg);
-}
-
-.sunpanel {
-  background-image: url(/assets/IMG/panneauS1.png);
 }
 
 .Nv9.1 {
