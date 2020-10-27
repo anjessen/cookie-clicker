@@ -106,7 +106,6 @@ function click() {
     document.getElementsByClassName("terre")[0].addEventListener("click", function(){
         degreeCount--;
         moneyCount++;
-        clickCount++;
         document.getElementById("money").innerHTML = Math.round(moneyCount);
     });
 }
