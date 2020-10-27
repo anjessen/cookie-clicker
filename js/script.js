@@ -46,15 +46,18 @@ items.forEach((element, i) => {
 })
 
 function pushUpgrade (name, element, effect, cost) {
-    let upg = document.createElement("LI");
-    document.getElementById("upgrades").appendChild(upg)
+    let li = document.createElement("LI");
+    document.getElementById("upgrades").appendChild(li);
+    let upg = document.createElement("A");
+    li.appendChild(upg);
     upg.setAttribute("id", name);
+    upg.setAttribute("class", "upgrade");
     upg.innerHTML = `${element} ${effect} (${cost})`
 }
 
 function checkUpgrade(element) {
-    if (element["quantity"] = 5) {
-
+    if ((element["quantity"] == 5) || (element["quantity"] == 15) || ((element["quantity"] % 25 == 0) && (element["quantity"] !== 0))) {
+        pushUpgrade(element.name, element, "lvl up !", element.cost)
     }
 }
 
