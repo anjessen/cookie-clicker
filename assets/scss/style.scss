@@ -1,6 +1,114 @@
 /////////////// Style.scss COOKIES
 
 
-body {
+body  {
     background-color: green;
 }
+
+/// Image principal 
+
+.terre {
+    background-image: url(/assets/IMG/terre.png); // Terre IMG principal
+    width: 10%;
+    height: auto;
+}
+.temp {
+    background-image: url(/assets/IMG/temp1.png); // thermometre explose
+}
+
+
+
+
+/// icone bonus
+
+.compost{//.Nv1 {
+    background-image: url(/assets/IMG/ramassetonmegot1.png); // megot à terre
+}
+
+.Nv1.1 {
+    background-image: url(/assets/IMG/ramassetonmegot2.png); // logo ramasse ton megot
+}
+
+.Nv2 {
+    background-image: url(/assets/IMG/plastique-bouteille.png); // bouteille-plastique -> bouteille réutilisable
+}
+
+.Nv2.1 {
+    background-image: url(/assets/IMG/bouteilleverre1.png); // bouteille verre
+}
+
+.Nv2.2 {
+    background-image: url(/assets/IMG/sacréutilisable.png); // sac réutilisable
+}
+
+.Nv3 {
+    background-image: url(/assets/IMG/poubelle-verte.png); // poubelle verte
+}
+
+.Nv3.1 {
+    background-image: url(/assets/IMG/poubelle-jaune.png); // poubelle jaune
+}
+
+.tree {//.Nv3.2 {
+    background-image: url(/assets/IMG/recycle.jpeg); // bac recyclage
+}
+
+.Nv3.3 {
+    background-image: url(/assets/IMG/camionpoubelle.png); // camion poubelles
+}
+
+.recycle{ //.Nv3.4 {
+    background-image: url(/assets/IMG/dechargebac.png); // Décharge conteneur
+}
+
+.car{ //.Nv4 {
+    background-image: url(/assets/IMG/vélo1.png); // Vélo vert
+}
+
+.Nv4.1 {
+    background-image: url(/assets/IMG/voitureelectrique.png); // voiture electrique
+}
+
+.Nv4.2 {
+    background-image: url(/assets/IMG/grosbus.png); // Bus
+}
+
+.factory{ //.Nv5 {
+    background-image: url(/assets/IMG/usine1.png); // petite usine
+}
+
+.Nv5.1 {
+    background-image: url(/assets/IMG/usine2.png); // grande usine
+}
+
+.windturbine{ //.Nv6 {
+    background-image: url(/assets/IMG/Eolienne1.png); // petite éolienne
+}
+
+.Nv6.1 {
+    background-image: url(/assets/IMG/Eolienne2.png); // grande éolienne
+}
+
+.Nv7 {
+    background-image: url(/assets/IMG/planterunegraine.png); // plante une graine
+}
+
+.politician{ //.Nv8 {
+    background-image: url(/assets/IMG/vote1.png); // buletin de vote 
+}
+
+.Nv8.1 {
+    background-image: url(/assets/IMG/vote2.jpeg); // cycle éternel 
+}
+
+.sunpanel {//.Nv9 {
+    background-image: url(/assets/IMG/panneauS1.png); // petit panneaux photovoltéique
+}
+
+.Nv9.1 {
+    background-image: url(/assets/IMG/panneauS2.png); // gros panneaux photovoltéique
+}
+
+
+
+/////// Badges 
