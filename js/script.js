@@ -71,7 +71,7 @@ function stopInterval(){
 function frame(){
     totalMoney();
     stopInterval();
-    document.getElementById("money").innerHTML = moneyCount;
+    document.getElementById("money").innerHTML = Math.round(moneyCount);
     console.log(degreeCount, moneyCount);
     items.forEach((element, i) => {
         element["price"] = Math.round(element["cost"] * (element["growth"] ** element["quantity"]));
