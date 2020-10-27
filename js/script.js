@@ -50,7 +50,7 @@ function checkUpgrade(element) {
 }
 
 items.forEach((element, i) => {
-    document.getElementById(`${element["name"]}`).addEventListener("click", () => {
+    document.getElementsByClassName(`item`)[i].addEventListener("click", () => {
         if (moneyCount >= element["price"]) {
             element["quantity"]++;
             moneyCount -= element["price"];
