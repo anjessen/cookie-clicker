@@ -27,9 +27,7 @@ class Upgrade {
     constructor (name, cost) {
         this.name = name;
         this.cost = cost;
-        this.event = false;
     }
-
 }
 
 
@@ -43,21 +41,19 @@ let degreeCount = 1000000;
 let moneyCount = 10;
 let clickCount = 0;
 
-function buyItems(){
-    items.forEach((element, i) => {
-        document.getElementById(`${element["name"]}`).addEventListener("click", () => {
-            if (moneyCount >= element["price"]) {
-                element["quantity"]++;
-                moneyCount -= element["price"];
-                degreeCount -= element["temperature"];
-                document.getElementsByClassName("quantity")[i].innerHTML = element["quantity"];
-                element["price"] = Math.round(element["cost"] * (element["growth"] ** element["quantity"]));
-                document.getElementsByClassName("price")[i].innerHTML = element["price"];
-            }
-        })
+items.forEach((element, i) => {
+    document.getElementById(`${element["name"]}`).addEventListener("click", () => {
+        if (moneyCount >= element["price"]) {
+            element["quantity"]++;
+            moneyCount -= element["price"];
+            degreeCount -= element["temperature"];
+            document.getElementsByClassName("quantity")[i].innerHTML = element["quantity"];
+            element["price"] = Math.round(element["cost"] * (element["growth"] ** element["quantity"]));
+            document.getElementsByClassName("price")[i].innerHTML = element["price"];
+        }
     })
-}
-buyItems();
+})
+
 
 function totalMoney() {
     items.forEach(element => {
