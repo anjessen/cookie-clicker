@@ -63,7 +63,6 @@ function stopInterval(){
 }
 
 function frame(){
-    totalDegree();
     totalMoney();
     click();
     stopInterval();
