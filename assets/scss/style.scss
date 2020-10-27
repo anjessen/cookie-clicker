@@ -40,7 +40,7 @@ body {
     border-color: #c5fa32;
   }
   
-  li#item a {
+  li #item a {
     margin-left: 10px;
     float: left;
     display: block;
@@ -53,44 +53,50 @@ body {
     border: 2px solid;
   }
   
-  div.item {
+  div #item {
     text-align: center;
     width: 1%;
     height: auto;
 
   }
+
+  img .compost {
+    text-align: center;
+    width: 10px;
+    height: auto;
+  }
   
-  img#sunpanel.item {
+  img .sunpanel {
     text-align: center;
     width: 1%;
     height: auto;
   }
   
-  img#tree.item {
+  img .tree {
     text-align: center;
     width: 1%;
     height: auto;
   }
   
-  img#car.item {
+  img .car {
     text-align: center;
     width: 1%;
     height: auto;
   }
   
-  img#windturbine.item {
+  img .windturbine {
     text-align: center;
     width: 1%;
     height: auto;
   }
   
-  img#factory.item {
+  img .factory {
     text-align: center;
     width: 1%;
     height: auto;
   }
   
-  img#politician.item {
+  img .politician {
     text-align: center;
     width: 1%;
     height: auto;
