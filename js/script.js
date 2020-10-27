@@ -22,15 +22,6 @@ let politician = new Item ("politician", 10000, 50000);
 
 let items = [compost, tree, sunpanel, car, windturbine, recycle, factory, politician];
 
-
-class Upgrade {
-    constructor (name, cost) {
-        this.name = name;
-        this.cost = cost;
-    }
-}
-
-
 items.forEach((element, i) => {
     element["price"] = Math.round(element["cost"] * (element["growth"] ** element["quantity"]));
     document.getElementsByClassName("price")[i].innerHTML = element["price"];
@@ -54,6 +45,18 @@ items.forEach((element, i) => {
     })
 })
 
+function pushUpgrade (name, element, effect, cost) {
+    let upg = document.createElement("LI");
+    document.getElementById("upgrades").appendChild(upg)
+    upg.setAttribute("id", name);
+    upg.innerHTML = `${element} ${effect} (${cost})`
+}
+
+function checkUpgrade(element) {
+    if (element["quantity"] = 5) {
+
+    }
+}
 
 function totalMoney() {
     items.forEach(element => {
