@@ -1,5 +1,6 @@
 @charset "UTF-8";
 body {
+<<<<<<< HEAD
   background-color: palegreen green;
 }
 
@@ -19,6 +20,66 @@ h2 {
 
 .compost {
   background-image: url(/assets/IMG/ramassetonmegot1.png);
+=======
+  background-color: palegreen;
+}
+
+h2 {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: green;
+}
+
+p {
+  color: goldenrod;
+  font-size: 150%;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+li {
+  margin-left: 2px;
+  float: left;
+  /*pour IE*/
+}
+
+ul li a {
+  display: block;
+  float: left;
+  width: 100px;
+  background-color: darkgreen;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  padding: 5px;
+  border: 2px solid;
+  /*pour avoir un effet "outset" avec IE :*/
+  border-color: #DCDCDC #696969 #696969 #DCDCDC;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+ul li a:hover {
+  background-color: #D3D3D3;
+  border-color: #696969 #DCDCDC #DCDCDC #696969;
+}
+
+.divterre {
+  background-image: url(/assets/IMG/terre.png);
+  width: 100%;
+  height: auto;
+  text-align: center;
+  background-repeat: no-repeat;
+}
+
+.terre {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  background-repeat: no-repeat;
+>>>>>>> yvangoudmant
 }
 
 .Nv1.1 {
@@ -45,10 +106,13 @@ h2 {
   background-image: url(/assets/IMG/poubelle-jaune.png);
 }
 
+<<<<<<< HEAD
 .tree {
   background-image: url(/assets/IMG/recycle.jpeg);
 }
 
+=======
+>>>>>>> yvangoudmant
 .Nv3.3 {
   background-image: url(/assets/IMG/camionpoubelle.png);
 }
@@ -69,18 +133,24 @@ h2 {
   background-image: url(/assets/IMG/grosbus.png);
 }
 
+<<<<<<< HEAD
 .factory {
   background-image: url(/assets/IMG/usine1.png);
 }
 
+=======
+>>>>>>> yvangoudmant
 .Nv5.1 {
   background-image: url(/assets/IMG/usine2.png);
 }
 
+<<<<<<< HEAD
 .windturbine {
   background-image: url(/assets/IMG/Eolienne1.png);
 }
 
+=======
+>>>>>>> yvangoudmant
 .Nv6.1 {
   background-image: url(/assets/IMG/Eolienne2.png);
 }
@@ -89,18 +159,24 @@ h2 {
   background-image: url(/assets/IMG/planterunegraine.png);
 }
 
+<<<<<<< HEAD
 .politician {
   background-image: url(/assets/IMG/vote1.png);
 }
 
+=======
+>>>>>>> yvangoudmant
 .Nv8.1 {
   background-image: url(/assets/IMG/vote2.jpeg);
 }
 
+<<<<<<< HEAD
 .sunpanel {
   background-image: url(/assets/IMG/panneauS1.png);
 }
 
+=======
+>>>>>>> yvangoudmant
 .Nv9.1 {
   background-image: url(/assets/IMG/panneauS2.png);
 }
