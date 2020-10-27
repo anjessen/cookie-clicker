@@ -35,7 +35,7 @@ function buyItems(){
                 element["quantity"]++;
                 moneyCount -= element["cost"];
                 degreeCount -= element["temperature"];
-                document.getElementById(`${element["name"]}`).innerHTML = element["quantity"];
+                document.getElementsByClassName("quantity")[i].innerHTML = element["quantity"];
             }
         })
     })
