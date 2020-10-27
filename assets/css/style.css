@@ -46,10 +46,15 @@ ul li a:hover {
 }
 
 .terre {
-  width: 100%;
+  width: 25%;
   height: auto;
   text-align: center;
   background-repeat: no-repeat;
+}
+
+.temp {
+  width: 15%;
+  height: auto;
 }
 
 .Nv1.1 {
