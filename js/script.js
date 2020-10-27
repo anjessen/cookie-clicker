@@ -66,6 +66,7 @@ function stopInterval(){
 
 function frame(){
     totalMoney();
+    click();
     stopInterval();
     console.log(degreeCount, moneyCount);
 }
