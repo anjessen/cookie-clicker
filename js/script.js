@@ -55,6 +55,7 @@ function click() {
         document.getElementById("money").innerHTML = moneyCount;
     });
 }
+click();
 
 function stopInterval(){
     if (degreeCount == 15)
@@ -66,8 +67,8 @@ function stopInterval(){
 
 function frame(){
     totalMoney();
-    click();
     stopInterval();
+    document.getElementById("money").innerHTML = moneyCount;
     console.log(degreeCount, moneyCount);
 }
 
