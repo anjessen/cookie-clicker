@@ -13,8 +13,8 @@ class Item {
 
 let compost = new Item ("compost", 0.1, 10);
 let tree = new Item ("tree", 1, 30);
-let sunpanel = new Item ("sunpanel", 10, 300);
-let car = new Item ("car", 50, 1000);
+let sunpanel = new Item ("sunpanel", 12, 250);
+let car = new Item ("car", 60, 1000);
 let windturbine = new Item ("windturbine", 300, 4500);
 let recycle = new Item ("recycle", 1000, 10000);
 let factory = new Item ("factory", 3000, 20000);
@@ -55,7 +55,7 @@ function click() {
     document.getElementsByClassName("terre")[0].addEventListener("click", function(){
         degreeCount--;
         moneyCount++;
-        document.getElementById("money").innerHTML = moneyCount;
+        document.getElementById("money").innerHTML = Math.round(moneyCount);
     });
 }
 click();
@@ -77,7 +77,6 @@ function frame(){
         element["price"] = Math.round(element["cost"] * (element["growth"] ** element["quantity"]));
         document.getElementsByClassName("price")[i].innerHTML = element["price"];
         document.getElementsByClassName("lvl")[i].innerHTML = element["level"];
-        
     })
 }
 
