@@ -67,7 +67,7 @@ li #item a {
 
 div #item {
   text-align: center;
-  width: 1%;
+  width: 1px;
   height: auto;
 }
 
@@ -79,7 +79,7 @@ img .compost {
 
 img .sunpanel {
   text-align: center;
-  width: 1%;
+  width: 5px;
   height: auto;
 }
 
@@ -97,19 +97,36 @@ img .car {
 
 img .windturbine {
   text-align: center;
-  width: 1%;
+  width: 5px;
   height: auto;
 }
 
 img .factory {
   text-align: center;
-  width: 1%;
+  width: 5px;
   height: auto;
 }
 
 img .politician {
   text-align: center;
-  width: 1%;
+  width: 5px;
   height: auto;
+}
+
+#money {
+  font-size: large;
+  color: #fcc01d;
+}
+
+div .items {
+  -moz-column-count: 2;
+  -moz-column-gap: 20px;
+  -moz-column-fill: auto;
+  -webkit-column-count: 2;
+  -webkit-column-gap: 20px;
+  -webkit-column-fill: auto;
+  column-count: 2;
+  column-gap: 20px;
+  column-fill: auto;
 }
 /*# sourceMappingURL=style.css.map */
