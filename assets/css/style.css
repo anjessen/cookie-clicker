@@ -68,9 +68,14 @@ li #item a {
 }
 
 p.lvl {
-  background-color: palegreen;
-  border: 2px;
+  background-color: yellowgreen;
+  border: 1px solid gold;
+  height: 100px;
   border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  width: 100px;
+  color: white;
 }
 
 div #item {
