@@ -103,6 +103,12 @@ img.item.windturbine {
   height: auto;
 }
 
+img.item.recycle {
+  text-align: center;
+  width: 10% !important;
+  height: auto;
+}
+
 img.item.factory {
   text-align: center;
   width: 10% !important;
