@@ -64,6 +64,13 @@ body {
     padding: 5px;
     border: 2px solid;
   }
+  p.lvl {
+    background-color: palegreen;
+    border: 2px;
+    border-radius: 50%;
+    
+    
+  }
   
   div #item {
     text-align: center;
@@ -136,7 +143,7 @@ body {
    column-fill: auto;
   }
 
-  p .€ {
+  p.€ {
     font-size: 6em;
     color: #fcc01d;
   }
