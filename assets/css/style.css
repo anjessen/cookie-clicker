@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   background-color: palegreen;
 }
@@ -50,6 +51,7 @@ ul li :hover {
   width: 10%;
   height: auto;
   margin-top: 5%;
+  margin-left: 15%;
 }
 
 li #item a {
@@ -71,51 +73,52 @@ div #item {
   height: auto;
 }
 
-img .compost {
+img.item.compost {
   text-align: center;
-  width: 5px !important;
+  width: 10% !important;
   height: auto;
 }
 
-img .sunpanel {
+img.item.sunpanel {
   text-align: center;
-  width: 1em;
+  width: 10% !important;
   height: auto;
 }
 
-img .tree {
+img.item.tree {
   text-align: center;
-  width: 1em;
+  width: 10% !important;
   height: auto;
 }
 
-img .car {
+img.item.car {
   text-align: center;
-  width: 1em;
+  width: 10% !important;
   height: auto;
 }
 
-img .windturbine {
+img.item.windturbine {
   text-align: center;
-  width: 1em;
+  width: 10% !important;
   height: auto;
 }
 
-img .factory {
+img.item.factory {
   text-align: center;
-  width: 1em;
+  width: 10% !important;
   height: auto;
 }
 
-img .politician {
+img.item.politician {
   text-align: center;
-  width: 1em;
+  width: 10% !important;
   height: auto;
 }
 
 #money {
   font-size: 5em;
   color: #fcc01d;
+  text-align: center;
 }
 
 .items {
@@ -128,5 +131,10 @@ img .politician {
   column-count: 2;
   column-gap: 20px;
   column-fill: auto;
+}
+
+p .€ {
+  font-size: 6em;
+  color: #fcc01d;
 }
 /*# sourceMappingURL=style.css.map */
