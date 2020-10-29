@@ -1,5 +1,13 @@
 body {
     background-color: palegreen;
+  
+  }
+  img.lianeborder {
+    width: 8%;
+    height: auto;
+    border-image-repeat: round;
+    position: absolute;
+    
   }
   
   h2 {
@@ -147,11 +155,12 @@ body {
     height: auto;
   }
   img.eco {
-    width: 15% !important;
+    width: 17% !important;
     height: auto;
     position: absolute;
+    object-position: bottom;
     margin-left: 75%;
-    margin-top: -6%;
+    margin-top: -7%;
     opacity: 0.7;
 
   }
@@ -162,9 +171,9 @@ body {
   #money {
     font-size: 5em;
     color: #004118;
-    margin-left: 80%;
+    margin-left: 82%;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    margin-top: -5%;
+    margin-top: -4%;
     position: absolute;
   }
   #devise {
