@@ -8,7 +8,6 @@ class Item {
         this.growth = 1.2;
         this.cost = cost;
         this.temperature = inc;
-        this.level = 0;
     }
 }
 
@@ -26,7 +25,6 @@ let items = [compost, tree, sunpanel, car, windturbine, recycle, factory, politi
 items.forEach((element, i) => {
     element["price"] = Math.round(element["cost"] * (element["growth"] ** element["quantity"]));
     document.getElementsByClassName("price")[i].innerHTML = element["price"];
-    document.getElementsByClassName("lvl")[i].innerHTML = element["level"];
 })
 
 let degreeCount = 1000000;
@@ -49,7 +47,7 @@ items.forEach((element, i) => {
 
 function totalMoney() {
     items.forEach(element => {
-        moneyCount += element["inc"] * element["quantity"] * (2 ** element["level"]);
+        moneyCount += element["inc"] * element["quantity"];
     })
 }
 
