@@ -40,7 +40,6 @@ items.forEach((element, i) => {
             document.getElementsByClassName("quantity")[i].innerHTML = element["quantity"];
             element["price"] = Math.round(element["cost"] * (element["growth"] ** element["quantity"]));
             document.getElementsByClassName("price")[i].innerHTML = element["price"];
-            document.getElementsByClassName("lvl")[i].innerHTML = element["level"];
         }
     })
 })
